@@ -1,0 +1,142 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('library-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  min-height: 520px;
+}
+
+.tab-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 14px;
+  cursor: pointer;
+  background-color: #eaeaea;
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+}
+
+.tab.active {
+  background-color: #004aad;
+  color: white;
+}
+
+form.tab-content {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  top: 56px;
+  left: 0;
+  padding: 20px;
+  z-index: 0;
+}
+
+form.tab-content.active {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: #004aad;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+input {
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 100%;
+}
+
+button {
+  padding: 12px;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #003b8a;
+}
+
+a {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #004aad;
+  text-align: center;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Responsive tweaks */
+@media screen and (max-width: 480px) {
+  .card {
+    min-height: 100%;
+    padding-top: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+
+  .tab {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+.logout {
+  color: white;
+  background-color: red;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.logout:hover {
+  background-color: darkred;
+}
